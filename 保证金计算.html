@@ -1,0 +1,799 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>保证金计算</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/保证金计算/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/保证金计算/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u536" class="ax_default box_1">
+        <div id="u536_div" class=""></div>
+        <div id="u536_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u537" class="ax_default _三级标题">
+        <div id="u537_div" class=""></div>
+        <div id="u537_text" class="text ">
+          <p><span style="text-decoration:none;">Margin Calculator</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u538" class="ax_default box_1">
+        <div id="u538_div" class=""></div>
+        <div id="u538_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u539" class="ax_default _三级标题">
+        <div id="u539_div" class=""></div>
+        <div id="u539_text" class="text ">
+          <p><span style="text-decoration:none;">Margin Calculator</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u540" class="ax_default _文本段落">
+        <div id="u540_div" class=""></div>
+        <div id="u540_text" class="text ">
+          <p><span style="text-decoration:none;">Calculate the minimun margin required</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u541" class="ax_default _文本段落">
+        <div id="u541_div" class=""></div>
+        <div id="u541_text" class="text ">
+          <p><span style="text-decoration:none;">Currency</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u542" class="ax_default _文本段落">
+        <div id="u542_div" class=""></div>
+        <div id="u542_text" class="text ">
+          <p><span style="text-decoration:none;">Leverage</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u543" class="ax_default _文本段落">
+        <div id="u543_div" class=""></div>
+        <div id="u543_text" class="text ">
+          <p><span style="text-decoration:none;">Pair</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u544" class="ax_default _文本段落">
+        <div id="u544_div" class=""></div>
+        <div id="u544_text" class="text ">
+          <p><span style="text-decoration:none;">Lots</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u545" class="ax_default button">
+        <div id="u545_div" class=""></div>
+        <div id="u545_text" class="text ">
+          <p><span style="text-decoration:none;">Calculate</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u546" class="ax_default _文本段落">
+        <div id="u546_div" class=""></div>
+        <div id="u546_text" class="text ">
+          <p><span style="text-decoration:none;">Margin required:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u547" class="ax_default _图片">
+        <img id="u547_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u547_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u548" class="ax_default _图片">
+        <img id="u548_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u548_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u549" class="ax_default _图片">
+        <img id="u549_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u549_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u550" class="ax_default text_field">
+        <div id="u550_div" class=""></div>
+        <input id="u550_input" type="text" value="" class="u550_input"/>
+      </div>
+
+      <!-- Unnamed (线) -->
+      <div id="u551" class="ax_default line">
+        <img id="u551_img" class="img " src="images/保证金计算/u551.svg"/>
+        <div id="u551_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u552" class="ax_default marker">
+        <img id="u552_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u552_text" class="text ">
+          <p><span style="text-decoration:none;">1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u553" class="ax_default marker">
+        <img id="u553_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u553_text" class="text ">
+          <p><span style="text-decoration:none;">2</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u554" class="ax_default marker">
+        <img id="u554_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u554_text" class="text ">
+          <p><span style="text-decoration:none;">3</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u555" class="ax_default marker">
+        <img id="u555_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u555_text" class="text ">
+          <p><span style="text-decoration:none;">4</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u556" class="ax_default _文本段落">
+        <div id="u556_div" class=""></div>
+        <div id="u556_text" class="text ">
+          <p><span style="text-decoration:none;">Calculate the minimun margin required</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u557" class="ax_default _文本段落">
+        <div id="u557_div" class=""></div>
+        <div id="u557_text" class="text ">
+          <p><span style="text-decoration:none;">Currency</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u558" class="ax_default _文本段落">
+        <div id="u558_div" class=""></div>
+        <div id="u558_text" class="text ">
+          <p><span style="text-decoration:none;">Leverage</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u559" class="ax_default _文本段落">
+        <div id="u559_div" class=""></div>
+        <div id="u559_text" class="text ">
+          <p><span style="text-decoration:none;">Pair</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u560" class="ax_default _文本段落">
+        <div id="u560_div" class=""></div>
+        <div id="u560_text" class="text ">
+          <p><span style="text-decoration:none;">Lots</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u561" class="ax_default button">
+        <div id="u561_div" class=""></div>
+        <div id="u561_text" class="text ">
+          <p><span style="text-decoration:none;">Calculate</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u562" class="ax_default _文本段落">
+        <div id="u562_div" class=""></div>
+        <div id="u562_text" class="text ">
+          <p><span style="text-decoration:none;">Margin required:</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u563" class="ax_default _图片">
+        <img id="u563_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u563_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u564" class="ax_default _图片">
+        <img id="u564_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u564_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (SVG) -->
+      <div id="u565" class="ax_default _图片">
+        <img id="u565_img" class="img " src="images/保证金计算/u547.svg"/>
+        <div id="u565_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u566" class="ax_default text_field">
+        <div id="u566_div" class=""></div>
+        <input id="u566_input" type="text" value="10" class="u566_input"/>
+      </div>
+
+      <!-- Unnamed (线) -->
+      <div id="u567" class="ax_default line">
+        <img id="u567_img" class="img " src="images/保证金计算/u551.svg"/>
+        <div id="u567_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u568" class="ax_default marker">
+        <img id="u568_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u568_text" class="text ">
+          <p><span style="text-decoration:none;">1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u569" class="ax_default marker">
+        <img id="u569_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u569_text" class="text ">
+          <p><span style="text-decoration:none;">2</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u570" class="ax_default marker">
+        <img id="u570_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u570_text" class="text ">
+          <p><span style="text-decoration:none;">3</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u571" class="ax_default marker">
+        <img id="u571_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u571_text" class="text ">
+          <p><span style="text-decoration:none;">4</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u572" class="ax_default _文本段落">
+        <div id="u572_div" class=""></div>
+        <div id="u572_text" class="text ">
+          <p><span style="text-decoration:none;">USD</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u573" class="ax_default _文本段落">
+        <div id="u573_div" class=""></div>
+        <div id="u573_text" class="text ">
+          <p><span style="text-decoration:none;">1：100</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u574" class="ax_default _文本段落">
+        <div id="u574_div" class=""></div>
+        <div id="u574_text" class="text ">
+          <p><span style="text-decoration:none;">EUR/CAD</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u575" class="ax_default _文本段落">
+        <div id="u575_div" class=""></div>
+        <div id="u575_text" class="text ">
+          <p><span style="text-decoration:none;">11373.98 USD</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u576" class="ax_default marker">
+        <img id="u576_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u576_text" class="text ">
+          <p><span style="text-decoration:none;">1</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u577" class="ax_default _文本段落">
+        <div id="u577_div" class=""></div>
+        <div id="u577_text" class="text ">
+          <p><span style="text-decoration:none;">账户货币共3个选项</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菜单) -->
+      <div id="u578" class="ax_default">
+        <img id="u578_menu" class="img " src="images/保证金计算/u578_menu.png" alt="u578_menu"/>
+
+        <!-- Unnamed (表格) -->
+        <div id="u579" class="ax_default">
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u580" class="ax_default menu_item">
+            <img id="u580_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u580_text" class="text ">
+              <p><span style="text-decoration:none;">USD</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u581" class="ax_default menu_item">
+            <img id="u581_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u581_text" class="text ">
+              <p><span style="text-decoration:none;">EUR</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u582" class="ax_default menu_item">
+            <img id="u582_img" class="img " src="images/保证金计算/u582.png"/>
+            <div id="u582_text" class="text ">
+              <p><span style="text-decoration:none;">GBP</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u583" class="ax_default marker">
+        <img id="u583_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u583_text" class="text ">
+          <p><span style="text-decoration:none;">2</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u584" class="ax_default _文本段落">
+        <div id="u584_div" class=""></div>
+        <div id="u584_text" class="text ">
+          <p><span style="text-decoration:none;">杠杆共5个选项</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菜单) -->
+      <div id="u585" class="ax_default">
+        <img id="u585_menu" class="img " src="images/保证金计算/u585_menu.png" alt="u585_menu"/>
+
+        <!-- Unnamed (表格) -->
+        <div id="u586" class="ax_default">
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u587" class="ax_default menu_item">
+            <img id="u587_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u587_text" class="text ">
+              <p><span style="text-decoration:none;">1：100</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u588" class="ax_default menu_item">
+            <img id="u588_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u588_text" class="text ">
+              <p><span style="text-decoration:none;">1：50</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u589" class="ax_default menu_item">
+            <img id="u589_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u589_text" class="text ">
+              <p><span style="text-decoration:none;">1：30</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u590" class="ax_default menu_item">
+            <img id="u590_img" class="img " src="images/保证金计算/u580.png"/>
+            <div id="u590_text" class="text ">
+              <p><span style="text-decoration:none;">1：20</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (Menu Item) -->
+          <div id="u591" class="ax_default menu_item">
+            <img id="u591_img" class="img " src="images/保证金计算/u582.png"/>
+            <div id="u591_text" class="text ">
+              <p><span style="text-decoration:none;">1：10</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u592" class="ax_default marker">
+        <img id="u592_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u592_text" class="text ">
+          <p><span style="text-decoration:none;">3</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u593" class="ax_default _文本段落">
+        <div id="u593_div" class=""></div>
+        <div id="u593_text" class="text ">
+          <p><span style="text-decoration:none;">交易的货币对选项：<br>USD/JPY USD/CAD EUR/NZD EUR/USD EUR/CAD EUR/JPY EUR/GBP GBP/JPY GBP/USD</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (正水滴形) -->
+      <div id="u594" class="ax_default marker">
+        <img id="u594_img" class="img " src="images/模拟盘交易页面/u22.svg"/>
+        <div id="u594_text" class="text ">
+          <p><span style="text-decoration:none;">4</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u595" class="ax_default _文本段落">
+        <div id="u595_div" class=""></div>
+        <div id="u595_text" class="text ">
+          <p><span style="text-decoration:none;">1手=100000 对应货币</span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;">杠杆比例 * 手数 * 100000 = 保证金（以对应货币为单位）</span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;">如： EUR/CAD，10手，杠杆为1：100</span></p><p><span style="text-decoration:none;">则：保证金（以EUR为单位） = 100000 * 10 / 100 = 10000 EUR</span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;">若用户选择USD为账户货币，则将10000EUR转换为USD</span></p><p><span style="text-decoration:none;">即最后的保证金为：10000EUR * 1.137398 = 11373.98 USD</span></p><p><span style="text-decoration:none;"><br></span></p><p><span style="text-decoration:none;">转换的比例如下（即1单位对应货币等值的账户货币数量）：</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (表格) -->
+      <div id="u596" class="ax_default">
+
+        <!-- Unnamed (单元格) -->
+        <div id="u597" class="ax_default table_cell">
+          <img id="u597_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u597_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u598" class="ax_default table_cell">
+          <img id="u598_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u598_text" class="text ">
+            <p><span style="text-decoration:none;">USD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u599" class="ax_default table_cell">
+          <img id="u599_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u599_text" class="text ">
+            <p><span style="text-decoration:none;">EUR</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u600" class="ax_default table_cell">
+          <img id="u600_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u600_text" class="text ">
+            <p><span style="text-decoration:none;">GBP</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u601" class="ax_default table_cell">
+          <img id="u601_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u601_text" class="text ">
+            <p><span style="text-decoration:none;">USD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u602" class="ax_default table_cell">
+          <img id="u602_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u602_text" class="text ">
+            <p><span style="text-decoration:none;">1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u603" class="ax_default table_cell">
+          <img id="u603_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u603_text" class="text ">
+            <p><span style="text-decoration:none;">0.72020</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u604" class="ax_default table_cell">
+          <img id="u604_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u604_text" class="text ">
+            <p><span style="text-decoration:none;">0.78525</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u605" class="ax_default table_cell">
+          <img id="u605_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u605_text" class="text ">
+            <p><span style="text-decoration:none;">EUR</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u606" class="ax_default table_cell">
+          <img id="u606_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u606_text" class="text ">
+            <p><span style="text-decoration:none;">1.13885</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u607" class="ax_default table_cell">
+          <img id="u607_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u607_text" class="text ">
+            <p><span style="text-decoration:none;">1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u608" class="ax_default table_cell">
+          <img id="u608_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u608_text" class="text ">
+            <p><span style="text-decoration:none;">0.89447</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u609" class="ax_default table_cell">
+          <img id="u609_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u609_text" class="text ">
+            <p><span style="text-decoration:none;">GBP</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u610" class="ax_default table_cell">
+          <img id="u610_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u610_text" class="text ">
+            <p><span style="text-decoration:none;">1.27348</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u611" class="ax_default table_cell">
+          <img id="u611_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u611_text" class="text ">
+            <p><span style="text-decoration:none;">1.11794</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u612" class="ax_default table_cell">
+          <img id="u612_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u612_text" class="text ">
+            <p><span style="text-decoration:none;">1</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u613" class="ax_default table_cell">
+          <img id="u613_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u613_text" class="text ">
+            <p><span style="text-decoration:none;">CAD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u614" class="ax_default table_cell">
+          <img id="u614_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u614_text" class="text ">
+            <p><span style="text-decoration:none;">0.75823</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u615" class="ax_default table_cell">
+          <img id="u615_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u615_text" class="text ">
+            <p><span style="text-decoration:none;">0.66556</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u616" class="ax_default table_cell">
+          <img id="u616_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u616_text" class="text ">
+            <p><span style="text-decoration:none;">0.59524</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u617" class="ax_default table_cell">
+          <img id="u617_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u617_text" class="text ">
+            <p><span style="text-decoration:none;">JPY</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u618" class="ax_default table_cell">
+          <img id="u618_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u618_text" class="text ">
+            <p><span style="text-decoration:none;">0.00931099</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u619" class="ax_default table_cell">
+          <img id="u619_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u619_text" class="text ">
+            <p><span style="text-decoration:none;">0.00817327</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u620" class="ax_default table_cell">
+          <img id="u620_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u620_text" class="text ">
+            <p><span style="text-decoration:none;">0.00730833</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u621" class="ax_default table_cell">
+          <img id="u621_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u621_text" class="text ">
+            <p><span style="text-decoration:none;">AUD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u622" class="ax_default table_cell">
+          <img id="u622_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u622_text" class="text ">
+            <p><span style="text-decoration:none;">0.69494</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u623" class="ax_default table_cell">
+          <img id="u623_img" class="img " src="images/保证金计算/u597.png"/>
+          <div id="u623_text" class="text ">
+            <p><span style="text-decoration:none;">0.61019</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u624" class="ax_default table_cell">
+          <img id="u624_img" class="img " src="images/保证金计算/u600.png"/>
+          <div id="u624_text" class="text ">
+            <p><span style="text-decoration:none;">0.54556</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u625" class="ax_default table_cell">
+          <img id="u625_img" class="img " src="images/保证金计算/u625.png"/>
+          <div id="u625_text" class="text ">
+            <p><span style="text-decoration:none;">NZD</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u626" class="ax_default table_cell">
+          <img id="u626_img" class="img " src="images/保证金计算/u625.png"/>
+          <div id="u626_text" class="text ">
+            <p><span style="text-decoration:none;">0.66139</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u627" class="ax_default table_cell">
+          <img id="u627_img" class="img " src="images/保证金计算/u625.png"/>
+          <div id="u627_text" class="text ">
+            <p><span style="text-decoration:none;">0.58034</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u628" class="ax_default table_cell">
+          <img id="u628_img" class="img " src="images/保证金计算/u628.png"/>
+          <div id="u628_text" class="text ">
+            <p><span style="text-decoration:none;">0.51894</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u629" class="ax_default _文本段落">
+        <div id="u629_div" class=""></div>
+        <div id="u629_text" class="text ">
+          <p><span style="text-decoration:none;">账户货币</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u630" class="ax_default _文本段落">
+        <div id="u630_div" class=""></div>
+        <div id="u630_text" class="text ">
+          <p><span style="text-decoration:none;">对应货币</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线) -->
+      <div id="u631" class="ax_default line">
+        <img id="u631_img" class="img " src="images/保证金计算/u631.svg"/>
+        <div id="u631_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
